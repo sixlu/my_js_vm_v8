@@ -1,0 +1,20 @@
+# 1 "try.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "try.c"
+# 1 "embedObject.h" 1
+
+
+
+
+
+
+class embedObject {
+# 2 "try.c" 2
+
+Node::_javascript_attributes = "attributes";
+
+class Try{
+
+static string _javascript_attributes;;
+}

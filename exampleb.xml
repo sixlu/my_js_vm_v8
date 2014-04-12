@@ -1,0 +1,67 @@
+<BODY bgcolor="#fffacd" text="#000000" link="#000000" vlink="#000000">
+<!--Navigation Panel-->
+<A NAME="tex2html114"
+  HREF="node9.html">
+<IMG WIDTH="45" HEIGHT="26" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="next.gif"></A> 
+<A NAME="tex2html112"
+  HREF="node7.html">
+<IMG WIDTH="30" HEIGHT="26" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="up.gif"></A> 
+<A NAME="tex2html108"
+  HREF="node7.html">
+<IMG WIDTH="75" HEIGHT="26" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="previous.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html115"
+  HREF="node9.html">A Simple Example</A>
+
+<B> Up:</B> <A NAME="tex2html113"
+  HREF="node7.html">Gdome2 Bootstrap</A>
+<B> Previous:</B> <A NAME="tex2html109"
+  HREF="node7.html">Gdome2 Bootstrap</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00023100000000000000">
+Standard way to Create a <TT>GdomeDocument</TT></A>
+
+</H3>
+
+Within the DOM specification, the only way to create a <TT>Document</TT> object is
+by means of the <TT>createDocument</TT> method in the <TT>DOMImplementation</TT>
+interface.
+
+In Gdome2 this feature is implemented by
+<PRE>
+GdomeDocument*
+gdome_DOMImplementation_createDocument (GdomeDOMImplementation *self,
+                                        GdomeDOMString *namespaceURI,
+                                        GdomeDOMString *qualifiedName,
+                                        GdomeDocumentType *doctype,
+                                        GdomeException *exc)
+</PRE>
+which creates a <TT>Document</TT> object of the specified type with a
+root element specified by <TT>namespaceURI</TT> and <TT>qualifiedName</TT>.
+
+Gdome2 also implements a non standard way to create a new <TT>Document</TT>
+
+object parsing a XML document identified by a URI:
+<PRE>
+GdomeDocument*
+gdome_DOMImplementation_parseFile (GdomeDOMImplementation *self,
+                                   const gchar* uri,
+                                   GdomeException* exc)
+</PRE>
+
+The document can also be validated using
+<code>gdome_DOMimplentation_validateFile</code> which has
+the same prototype as the method above.
+
+<BR><HR>
+<ADDRESS>
+Paolo Casarini
+2001-04-01
+</ADDRESS>
+</BODY>
